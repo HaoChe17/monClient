@@ -108,16 +108,17 @@ public class AnalyzeMon implements Runnable{
 		startTime=timeStamp;
 		while(true){
 			//rmi调用
-			monData="{\"time\":1508035108970,\"monitorInfo\":{\"jvmInfo\":{\"S0C\":\"512.0\",\"S1C\":\"512.0\",\"S0U\":\"448.0\",\"S1U\":\"0.0\",\"EC\":\"25600.0\",\"EU\":\"10425.8\",\"OC\":\"87552.0\",\"OU\":\"67673.2\",\"MC\":\"-\",\"MU\":\"-\",\"CCSC\":\"-\",\"CCSU\":\"-\",\"YGC\":\"19210\",\"YGCT\":\"55.367\",\"FGC\":\"18\",\"FGCT\":\"1.247\",\"GCT\":\"56.614\"},\"osInfo\":{\"disksInfo\":{\"diskLoadInfo\":{\"diskNum\":2,\"vda\":{\"rrqm/s\":\"0.01\",\"wrqm/s\":\"43.36\",\"r/s\":\"1.59\",\"w/s\":\"2.25\",\"rkB/s\":\"104.17\",\"wkB/s\":\"182.46\",\"avgrq-sz\":\"149.21\",\"avgqu-sz\":\"0.21\",\"await\":\"53.45\",\"svctm\":\"1.48\",\"%util\":\"0.57\"},\"vdb\":{\"rrqm/s\":\"0.00\",\"wrqm/s\":\"0.03\",\"r/s\":\"0.07\",\"w/s\":\"0.91\",\"rkB/s\":\"1.03\",\"wkB/s\":\"34.09\",\"avgrq-sz\":\"72.02\",\"avgqu-sz\":\"0.01\",\"await\":\"12.61\",\"svctm\":\"1.15\",\"%util\":\"0.11\"}},\"diskSpaceInfo\":{\"/dev/vda1\":{\"Filesystem\":\"/dev/vda1\",\"Size\":\"40G\",\"Used\":\"9.1G\",\"Avail\":\"29G\",\"Use%\":\"24%\",\"Mounted-on\":\"/\"},\"tmpfs\":{\"Filesystem\":\"tmpfs\",\"Size\":\"7.8G\",\"Used\":\"0\",\"Avail\":\"7.8G\",\"Use%\":\"0%\",\"Mounted-on\":\"/dev/shm\"},\"/dev/vdb1\":{\"Filesystem\":\"/dev/vdb1\",\"Size\":\"500G\",\"Used\":\"24G\",\"Avail\":\"477G\",\"Use%\":\"5%\",\"Mounted-on\":\"/alidata\"}}},\"memsInfo\":{\"mem-total\":\"16334340\",\"mem-used\":\"15575104\",\"mem-free\":\"759236\",\"mem-shared\":\"0\",\"mem-buffers\":\"289500\",\"mem-cached\":\"6396160\",\"-/+buf/cac-used\":\"8889444\",\"-/+buf/cac-free\":\"7444896\",\"Swap-total\":\"0\",\"Swap-used\":\"0\",\"Swap-free\":\"0\"},\"cpuInfo\":{\"cpuFrameWork\":\"_x86_64_\",\"cpuCount\":\"8\",\"cpuLoad\":{\"all\":{\"CPU\":\"all\",\"%usr\":\"0.37\",\"%nice\":\"0.00\",\"%sys\":\"0.12\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.12\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"99.38\"},\"0\":{\"CPU\":\"0\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"1\":{\"CPU\":\"1\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"2\":{\"CPU\":\"2\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"3\":{\"CPU\":\"3\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"4\":{\"CPU\":\"4\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"5\":{\"CPU\":\"5\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"6\":{\"CPU\":\"6\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"7\":{\"CPU\":\"7\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"}}}},\"appStatInfo\":{\"Time\":\"1508035110\",\"PID\":\"24429\",\"%usr\":\"0.16\",\"%system\":\"0.07\",\"%guest\":\"0.00\",\"%CPU\":\"0.24\",\"CPU\":\"3\",\"minflt/s\":\"0.21\",\"majflt/s\":\"0.00\",\"VSZ\":\"8916456\",\"RSS\":\"545360\",\"%MEM\":\"3.34\",\"kB_rd/s\":\"0.00\",\"kB_wr/s\":\"0.34\",\"kB_ccwr/s\":\"0.00\",\"Command\":\"java\"}}}";
+//			monData="{\"time\":1508035108970,\"monitorInfo\":{\"jvmInfo\":{\"S0C\":\"512.0\",\"S1C\":\"512.0\",\"S0U\":\"448.0\",\"S1U\":\"0.0\",\"EC\":\"25600.0\",\"EU\":\"10425.8\",\"OC\":\"87552.0\",\"OU\":\"67673.2\",\"MC\":\"-\",\"MU\":\"-\",\"CCSC\":\"-\",\"CCSU\":\"-\",\"YGC\":\"19210\",\"YGCT\":\"55.367\",\"FGC\":\"18\",\"FGCT\":\"1.247\",\"GCT\":\"56.614\"},\"osInfo\":{\"disksInfo\":{\"diskLoadInfo\":{\"diskNum\":2,\"vda\":{\"rrqm/s\":\"0.01\",\"wrqm/s\":\"43.36\",\"r/s\":\"1.59\",\"w/s\":\"2.25\",\"rkB/s\":\"104.17\",\"wkB/s\":\"182.46\",\"avgrq-sz\":\"149.21\",\"avgqu-sz\":\"0.21\",\"await\":\"53.45\",\"svctm\":\"1.48\",\"%util\":\"0.57\"},\"vdb\":{\"rrqm/s\":\"0.00\",\"wrqm/s\":\"0.03\",\"r/s\":\"0.07\",\"w/s\":\"0.91\",\"rkB/s\":\"1.03\",\"wkB/s\":\"34.09\",\"avgrq-sz\":\"72.02\",\"avgqu-sz\":\"0.01\",\"await\":\"12.61\",\"svctm\":\"1.15\",\"%util\":\"0.11\"}},\"diskSpaceInfo\":{\"/dev/vda1\":{\"Filesystem\":\"/dev/vda1\",\"Size\":\"40G\",\"Used\":\"9.1G\",\"Avail\":\"29G\",\"Use%\":\"24%\",\"Mounted-on\":\"/\"},\"tmpfs\":{\"Filesystem\":\"tmpfs\",\"Size\":\"7.8G\",\"Used\":\"0\",\"Avail\":\"7.8G\",\"Use%\":\"0%\",\"Mounted-on\":\"/dev/shm\"},\"/dev/vdb1\":{\"Filesystem\":\"/dev/vdb1\",\"Size\":\"500G\",\"Used\":\"24G\",\"Avail\":\"477G\",\"Use%\":\"5%\",\"Mounted-on\":\"/alidata\"}}},\"memsInfo\":{\"mem-total\":\"16334340\",\"mem-used\":\"15575104\",\"mem-free\":\"759236\",\"mem-shared\":\"0\",\"mem-buffers\":\"289500\",\"mem-cached\":\"6396160\",\"-/+buf/cac-used\":\"8889444\",\"-/+buf/cac-free\":\"7444896\",\"Swap-total\":\"0\",\"Swap-used\":\"0\",\"Swap-free\":\"0\"},\"cpuInfo\":{\"cpuFrameWork\":\"_x86_64_\",\"cpuCount\":\"8\",\"cpuLoad\":{\"all\":{\"CPU\":\"all\",\"%usr\":\"0.37\",\"%nice\":\"0.00\",\"%sys\":\"0.12\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.12\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"99.38\"},\"0\":{\"CPU\":\"0\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"1\":{\"CPU\":\"1\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"2\":{\"CPU\":\"2\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"3\":{\"CPU\":\"3\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"4\":{\"CPU\":\"4\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"5\":{\"CPU\":\"5\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"6\":{\"CPU\":\"6\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"7\":{\"CPU\":\"7\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"}}}},\"appStatInfo\":{\"Time\":\"1508035110\",\"PID\":\"24429\",\"%usr\":\"0.16\",\"%system\":\"0.07\",\"%guest\":\"0.00\",\"%CPU\":\"0.24\",\"CPU\":\"3\",\"minflt/s\":\"0.21\",\"majflt/s\":\"0.00\",\"VSZ\":\"8916456\",\"RSS\":\"545360\",\"%MEM\":\"3.34\",\"kB_rd/s\":\"0.00\",\"kB_wr/s\":\"0.34\",\"kB_ccwr/s\":\"0.00\",\"Command\":\"java\"}}}";
 //			if(count==1)monData="{\"time\":1508035108970,\"monitorInfo\":{\"jvmInfo\":{\"S0C\":\"512.0\",\"S1C\":\"512.0\",\"S0U\":\"448.0\",\"S1U\":\"0.0\",\"EC\":\"25600.0\",\"EU\":\"10425.8\",\"OC\":\"87552.0\",\"OU\":\"67673.2\",\"MC\":\"-\",\"MU\":\"-\",\"CCSC\":\"-\",\"CCSU\":\"-\",\"YGC\":\"19210\",\"YGCT\":\"55.367\",\"FGC\":\"22\",\"FGCT\":\"3.785\",\"GCT\":\"56.614\"},\"osInfo\":{\"disksInfo\":{\"diskLoadInfo\":{\"diskNum\":2,\"vda\":{\"rrqm/s\":\"0.01\",\"wrqm/s\":\"43.36\",\"r/s\":\"1.59\",\"w/s\":\"2.25\",\"rkB/s\":\"104.17\",\"wkB/s\":\"182.46\",\"avgrq-sz\":\"149.21\",\"avgqu-sz\":\"0.21\",\"await\":\"53.45\",\"svctm\":\"1.48\",\"%util\":\"0.57\"},\"vdb\":{\"rrqm/s\":\"0.00\",\"wrqm/s\":\"0.03\",\"r/s\":\"0.07\",\"w/s\":\"0.91\",\"rkB/s\":\"1.03\",\"wkB/s\":\"34.09\",\"avgrq-sz\":\"72.02\",\"avgqu-sz\":\"0.01\",\"await\":\"12.61\",\"svctm\":\"1.15\",\"%util\":\"0.11\"}},\"diskSpaceInfo\":{\"/dev/vda1\":{\"Filesystem\":\"/dev/vda1\",\"Size\":\"40G\",\"Used\":\"9.1G\",\"Avail\":\"29G\",\"Use%\":\"24%\",\"Mounted-on\":\"/\"},\"tmpfs\":{\"Filesystem\":\"tmpfs\",\"Size\":\"7.8G\",\"Used\":\"0\",\"Avail\":\"7.8G\",\"Use%\":\"0%\",\"Mounted-on\":\"/dev/shm\"},\"/dev/vdb1\":{\"Filesystem\":\"/dev/vdb1\",\"Size\":\"500G\",\"Used\":\"24G\",\"Avail\":\"477G\",\"Use%\":\"5%\",\"Mounted-on\":\"/alidata\"}}},\"memsInfo\":{\"mem-total\":\"16334340\",\"mem-used\":\"15575104\",\"mem-free\":\"759236\",\"mem-shared\":\"0\",\"mem-buffers\":\"289500\",\"mem-cached\":\"6396160\",\"-/+buf/cac-used\":\"8889444\",\"-/+buf/cac-free\":\"7444896\",\"Swap-total\":\"0\",\"Swap-used\":\"0\",\"Swap-free\":\"0\"},\"cpuInfo\":{\"cpuFrameWork\":\"_x86_64_\",\"cpuCount\":\"8\",\"cpuLoad\":{\"all\":{\"CPU\":\"all\",\"%usr\":\"0.37\",\"%nice\":\"0.00\",\"%sys\":\"0.12\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.12\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"99.38\"},\"0\":{\"CPU\":\"0\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"1\":{\"CPU\":\"1\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"2\":{\"CPU\":\"2\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"3\":{\"CPU\":\"3\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"4\":{\"CPU\":\"4\",\"%usr\":\"0.99\",\"%nice\":\"0.00\",\"%sys\":\"0.99\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"98.02\"},\"5\":{\"CPU\":\"5\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"6\":{\"CPU\":\"6\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"},\"7\":{\"CPU\":\"7\",\"%usr\":\"0.00\",\"%nice\":\"0.00\",\"%sys\":\"0.00\",\"%iowait\":\"0.00\",\"%irq\":\"0.00\",\"%soft\":\"0.00\",\"%steal\":\"0.00\",\"%guest\":\"0.00\",\"%idle\":\"100.00\"}}}},\"appStatInfo\":{\"Time\":\"1508035110\",\"PID\":\"24429\",\"%usr\":\"0.16\",\"%system\":\"0.07\",\"%guest\":\"0.00\",\"%CPU\":\"0.24\",\"CPU\":\"3\",\"minflt/s\":\"0.21\",\"majflt/s\":\"0.00\",\"VSZ\":\"8916456\",\"RSS\":\"545360\",\"%MEM\":\"3.34\",\"kB_rd/s\":\"0.00\",\"kB_wr/s\":\"0.34\",\"kB_ccwr/s\":\"0.00\",\"Command\":\"java\"}}}";
 
+			log.info("rmiUrl:"+rmiUrl+",jdkPath:"+jdkPath+",appKeyWords:"+appKeyWords+",monDataType:"+monDataType+",ip:"+ip);
 //			System.out.println("rmiUrl:"+rmiUrl+",jdkPath:"+jdkPath+",appKeyWords:"+appKeyWords+",monDataType:"+monDataType+",ip:"+ip);
-//			try {
-//				monData=((MonitorInterface)Naming.lookup(rmiUrl)).getMonitorInfo(jdkPath,appKeyWords,monDataType);
-//			} catch (Exception e) {
-//				log.error("rmi远程调用异常");
-//				new GetExceptionDetalInfo().getExceptionDetail(e);
-//			}
+			try {
+				monData=((MonitorInterface)Naming.lookup(rmiUrl)).getMonitorInfo(jdkPath,appKeyWords,monDataType);
+			} catch (Exception e) {
+				log.error("rmi远程调用异常");
+				new GetExceptionDetalInfo().getExceptionDetail(e);
+			}
 			
 			//对rmi返回结果进行处理，把监控数据写入csv文件中
 			if(monData==null){
@@ -180,6 +181,12 @@ public class AnalyzeMon implements Runnable{
 			}else if(str.equals(ConfigData.appJvmInfoFlag)){
 				analyzeJvm();
 				continue;
+			}else if(str.equals(ConfigData.appMemInfoFlag)){
+				analyzeAppMem();
+				continue;
+			}else if(str.equals(ConfigData.appCpuInfoFlag)){
+				analyzeAppCpu();
+				continue;
 			}
 		}
 		//存入缓存
@@ -231,7 +238,7 @@ public class AnalyzeMon implements Runnable{
 		JSONObject memJson=jsObject.getJSONObject(ConfigData.firstLevel_monInfoKey).getJSONObject(ConfigData.secondLevel_osInfoKey).getJSONObject(ConfigData.thirdLevel_memsInfoKey);
 		String osAllMem=memJson.getString(ConfigData.fourthLevel_memTotalKey);
 		String osUsedMem=memJson.getString(ConfigData.fourthLevel_bufCahcheUsedKey);
-		String osUsedMemRate=String.format("%.2f", Double.parseDouble(osUsedMem)/Double.parseDouble(osAllMem));
+		String osUsedMemRate=String.format("%.2f", Double.parseDouble(osUsedMem)/Double.parseDouble(osAllMem)*100);
 		log.debug(monitorMapsKey+"'s osUsedMemRate:"+osUsedMemRate);
 		monMap.put(ConfigData.osMemUseRateFlag, osUsedMemRate);
 		if(count==0)monMapKeyList.add(ConfigData.osMemUseRateFlag);
@@ -248,7 +255,7 @@ public class AnalyzeMon implements Runnable{
 		int times=1;
 		for(String key:keySet){
 			String diskMountedOn=diskJson.getJSONObject(key).getString(ConfigData.sixthLevel_diskMountedOnKey);
-			String diskSpaceUsedRate=diskJson.getJSONObject(key).getString(ConfigData.sixthLevel_diskSpaceUsedKey);
+			String diskSpaceUsedRate=diskJson.getJSONObject(key).getString(ConfigData.sixthLevel_diskSpaceUsedKey).replace("%", "");
 			String mapKey=new StringBuffer(ConfigData.osDiskSpaceUseRateFlag).append("-").append(diskMountedOn).toString();
 			monMap.put(mapKey, diskSpaceUsedRate);
 			if(count==0)monMapKeyList.add(mapKey);
@@ -303,8 +310,6 @@ public class AnalyzeMon implements Runnable{
 		lastFGC=FGC;
 		lastFGCT=FGCT;
 		
-
-		
 		String FGCKey=new StringBuffer(ConfigData.appJvmInfoFlag).append("-").append(ConfigData.thirdLevel_FGCKey).toString();
 		String FGCTKey=new StringBuffer(ConfigData.appJvmInfoFlag).append("-").append(ConfigData.thirdLevel_FGCTKey).toString();
 		monMap.put(FGCKey, currentFGC);
@@ -315,5 +320,27 @@ public class AnalyzeMon implements Runnable{
 		jvmInfoSb.append("FGC:").append(currentFGC).append(",").append("FGCT:").append(currentFGCT).append(",");
 
 		log.debug(monitorMapsKey+"'s JVMInfo:"+jvmInfoSb.toString());
+	}
+	
+	/**
+	 * 解析应用cpu监控数据
+	 */
+	private void analyzeAppCpu(){
+		String appAvgCpu=jsObject.getJSONObject(ConfigData.firstLevel_monInfoKey).getJSONObject(ConfigData.secondLevel_appStatInfoKey).getString(ConfigData.thirdLevel_appCpuKey);
+//		String cpuAlluseRate=String.format("%.2f",100.00-Double.parseDouble(cpuAllIdle));
+		log.debug(monitorMapsKey+"'s appAvgCpuRate:"+appAvgCpu);
+		monMap.put(ConfigData.appCpuInfoFlag, appAvgCpu);
+		if(count==0)monMapKeyList.add(ConfigData.appCpuInfoFlag);
+	}
+	
+	/**
+	 * 解析应用mem监控数据
+	 */
+	private void analyzeAppMem(){
+		String appAvgMem=jsObject.getJSONObject(ConfigData.firstLevel_monInfoKey).getJSONObject(ConfigData.secondLevel_appStatInfoKey).getString(ConfigData.thirdLevel_appMemKey);
+//		String cpuAlluseRate=String.format("%.2f",100.00-Double.parseDouble(cpuAllIdle));
+		log.debug(monitorMapsKey+"'s appMemRate:"+appAvgMem);
+		monMap.put(ConfigData.appMemInfoFlag, appAvgMem);
+		if(count==0)monMapKeyList.add(ConfigData.appMemInfoFlag);
 	}
 }

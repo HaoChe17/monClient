@@ -18,10 +18,10 @@ import org.apache.log4j.Logger;
  */
 public class ConfigData {
 	//全局配置：
-	public static int durationTime=4;//需要执行的时间，单位：秒
-	public static int intervalTime=1;//解析数据的间隔时间，单位：秒
+	public static int durationTime=1800;//需要执行的时间，单位：秒
+	public static int intervalTime=5;//解析数据的间隔时间，单位：秒
 	public static String dateFormat="yyyy-MM-dd/HH:mm:ss.SSS";//时间戳格式
-	private static String configFile="C:\\Users\\Shinelon\\Desktop\\jtl\\config.properties";//配置文件
+	private static String configFile="./config.properties";//配置文件
 	
 	
 	//线程池配置：
@@ -56,14 +56,16 @@ public class ConfigData {
 	public static String appConfigDelitimer="\\},\\{";//解析远程调用monAgent方法参数的分隔符
 	public static int monTimeStampIndex=0;//存储监控数据的文件中时间戳所在的位置，0，表示第一列
 	public static String monDelimiter=",";//监控数据文件中的分隔符
-	private static String getDataType="os_cpuAvgUse,os_memUse,os_diskBusyness,os_diskSpaceUse,JVM";//需要获取的数据类型
+	private static String getDataType="%app_cpu,%app_mem,JVM,%os_cpuAvgUse,%os_memUse,%os_diskBusyness,%os_diskSpaceUse";//需要获取的数据类型
 	public static String[] getDataTypeArray=getDataType.split(",");//绘制图表需要的数据类型
 	//需要监控的数据的标签
-	public static String osCpuAvgUseRateFlag="os_cpuAvgUse";//系统CPU平均使用率的标签
-	public static String osMemUseRateFlag="os_memUse";//系统内存使用率的标签
-	public static String osDiskSpaceUseRateFlag="os_diskSpaceUse";//系统磁盘空间使用率的标签
-	public static String osDiskBusynessRateFlag="os_diskBusyness";//系统繁忙度的使用率的标签
+	public static String osCpuAvgUseRateFlag="%os_cpuAvgUse";//系统CPU平均使用率的标签
+	public static String osMemUseRateFlag="%os_memUse";//系统内存使用率的标签
+	public static String osDiskSpaceUseRateFlag="%os_diskSpaceUse";//系统磁盘空间使用率的标签
+	public static String osDiskBusynessRateFlag="%os_diskBusyness";//系统繁忙度的使用率的标签
 	public static String appJvmInfoFlag="JVM";//系统繁忙度的使用率的标签
+	public static String appMemInfoFlag="%app_mem";//系统繁忙度的使用率的标签
+	public static String appCpuInfoFlag="%app_cpu";//系统繁忙度的使用率的标签
 	
 	//json格式监控数据的键
 	public static final String firstLevel_monInfoKey="monitorInfo"; 
@@ -77,6 +79,8 @@ public class ConfigData {
 	public static final String thirdLevel_cpuInfoKey="cpuInfo";
 	public static final String thirdLevel_FGCKey="FGC";
 	public static final String thirdLevel_FGCTKey="FGCT";
+	public static final String thirdLevel_appCpuKey="%CPU";
+	public static final String thirdLevel_appMemKey="%MEM";
 	
 	public static final String fourthLevel_memTotalKey="mem-total";
 	public static final String fourthLevel_bufCahcheUsedKey="-/+buf/cac-used";
@@ -128,9 +132,9 @@ public class ConfigData {
 		log.debug("monAppConfig:"+monAppConfig);
 		
 		initMonAppConfig(monAppConfig);
-		initMergeFileConfig(mergeFile);
-		initJtlToCsvFileConfig(jtlToCsvFile);
-		
+//		initMergeFileConfig(mergeFile);
+//		initJtlToCsvFileConfig(jtlToCsvFile);
+//		
 	}
 	
 
@@ -201,13 +205,52 @@ public class ConfigData {
 		}
 		
 		//全局变量：
-		monAppConfig=prop.getProperty("monAppConfig");
-		log.info(new StringBuilder("monAppConfig=").append(monAppConfig));
-		mergeFile=prop.getProperty("mergeFile");
-		log.info(new StringBuilder("mergeFile=").append(mergeFile));
-		jtlToCsvFile=prop.getProperty("jtlToCsvFile");
-		log.info(new StringBuilder("jtlToCsvFile=").append(jtlToCsvFile));
-		monResultPath=prop.getProperty("monResultPath");
-		log.info(new StringBuilder("monResultPath=").append(monResultPath));
+		if(prop.containsKey("monAppConfig")){
+			monAppConfig=prop.getProperty("monAppConfig");
+			log.info(new StringBuilder("monAppConfig=").append(monAppConfig));
+		}
+		
+		if(prop.containsKey("mergeFile")){
+			mergeFile=prop.getProperty("mergeFile");
+			log.info(new StringBuilder("mergeFile=").append(mergeFile));
+		}
+		
+		if(prop.containsKey("jtlToCsvFile")){
+			jtlToCsvFile=prop.getProperty("jtlToCsvFile");
+			log.info(new StringBuilder("jtlToCsvFile=").append(jtlToCsvFile));
+		}
+		
+		if(prop.containsKey("monResultPath")){
+			monResultPath=prop.getProperty("monResultPath");
+			log.info(new StringBuilder("monResultPath=").append(monResultPath));
+		}
+		
+		if(prop.containsKey("reaultFileKeyWords")){
+			reaultFileKeyWords=prop.getProperty("reaultFileKeyWords");
+			log.info(new StringBuilder("reaultFileKeyWords=").append(reaultFileKeyWords));
+			
+		}
+		
+		if(prop.containsKey("durationTime")){
+			durationTime=Integer.parseInt(prop.getProperty("durationTime"));
+			log.info(new StringBuilder("durationTime=").append(durationTime));
+			
+		}
+		
+		if(prop.containsKey("dateFormat")){
+			dateFormat=prop.getProperty("dateFormat");
+			log.info(new StringBuilder("dateFormat=").append(dateFormat));
+		}
+		
+		if(prop.containsKey("intervalTime")){
+			intervalTime=Integer.parseInt(prop.getProperty("intervalTime"));
+			log.info(new StringBuilder("intervalTime=").append(intervalTime));
+		}
+		
+		if(prop.containsKey("getDataType")){
+			getDataType=prop.getProperty("getDataType");
+			log.info(new StringBuilder("getDataType=").append(getDataType));
+		}
+		
 	}
 }

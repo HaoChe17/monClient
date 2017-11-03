@@ -30,7 +30,7 @@
           </descriptorRefs>  
           <archive>    
                       <manifest>    
-                          <mainClass>test.mainTest</mainClass>  
+                          <mainClass>main.Main</mainClass>  
                       </manifest>  
                  </archive>  
         </configuration>  
